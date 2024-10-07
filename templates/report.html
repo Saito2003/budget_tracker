@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+</head>
+<body>
+    <h1>Income and Expense Report</h1>
+    <table border="1">
+        <tr>
+            <th>Type</th>
+            <th>Category</th>
+            <th>Amount</th>
+        </tr>
+        {% for entry in report %}
+        <tr>
+            <td>{{ entry.type }}</td>
+            <td>{{ entry.category }}</td>
+            <td>{{ entry.amount }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

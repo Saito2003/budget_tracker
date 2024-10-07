@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Personal Finance Tracker</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="{{ url_for('register') }}" class="btn">Register</a></li>
+                    <li><a href="{{ url_for('login') }}" class="btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Take Control of Your Finances</h2>
+                <p>Track your income, expenses, and savings effortlessly with our user-friendly platform.</p>
+                <a href="{{ url_for('register') }}" class="btn btn-primary">Get Started</a>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="feature-item">
+                    <h3>Expense Tracking</h3>
+                    <p>Easily log your expenses and categorize them for better insights.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Budgeting Tools</h3>
+                    <p>Create budgets to manage your spending and stay on track.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Data Visualization</h3>
+                    <p>Visualize your financial data through insightful graphs and reports.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Secure & Private</h3>
+                    <p>Your financial data is secure with us. We prioritize your privacy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>We are committed to helping individuals take control of their financial lives. Our personal finance tracker is designed to make managing money simple and accessible for everyone.</p>
+                <p>Join thousands of satisfied users who have improved their financial health.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>If you have any questions, feel free to reach out!</p>
+                <p>Email: <a href="mailto:support@financeapp.com">support@financeapp.com</a></p>
+                <p>Follow us on:</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Personal Finance Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

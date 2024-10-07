@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Personal Finance Tracker</h1>
+    <h1>Welcome, {{ username }}!</h1>
+
+    <h2>Add a Transaction</h2>
+    <form action="/add" method="post">
+        <label for="type">Type:</label>
+        <select name="type" id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+
+        <label for="category">Category:</label>
+        <input type="text" name="category" id="category" required>
+
+        <label for="amount">Amount:</label>
+        <input type="number" name="amount" id="amount" required>
+
+        <input type="submit" value="Add Transaction">
+    </form>
+
+    <h2>View Transactions</h2>
+    <a href="/transactions">View all transactions</a>
+
+    <h2>Reports</h2>
+    <a href="/report">Generate report</a>
+
+    <h2>Visualization</h2>
+    <a href="/visualize">Visualize expenses</a>
+
+<br><br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
+
